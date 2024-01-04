@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="phase2.Final.Project.StarHeathTest.StarHeathTest">
+      <class name="phase2.Final.Project.StarHeathTest.StarHealthTest">
         <methods>
+          <include name="hoverOverPlansMenuAndClickForMyFamily"/>
+          <include name="inputs_data"/>
+          <include name="validateStarHealthLogoAlt"/>
+          <include name="close"/>
           <include name="setUp"/>
-          <include name="validateTwitterPageOpensInNewTab"/>
         </methods>
-      </class> <!-- phase2.Final.Project.StarHeathTest.StarHeathTest -->
+      </class> <!-- phase2.Final.Project.StarHeathTest.StarHealthTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,6 +16,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import phase2.StarHealthHome.StarHealthHomePage;
 import phase2.finalProject.ExcelReader.ExcelReader;
 import phase2.finalProject.MediaDetail.MediaDetail;
@@ -25,7 +30,9 @@ public class StarHealthTest {
 	String driverPath= "drivers/windows/geckodriver.exe";
 	String siteURL= "https://www.starhealth.in/";  
 	private WebDriver driver;
-	private StarHealthHomePage homePAGE; 
+	private StarHealthHomePage homePAGE;
+	;
+	
 
     @BeforeClass
     public void setUp() {
@@ -40,6 +47,8 @@ public class StarHealthTest {
         
      // Initialize the StarHealthHomePage class
         homePAGE = new StarHealthHomePage(driver);
+        
+     
     }
     
     @AfterClass
@@ -49,19 +58,23 @@ public class StarHealthTest {
     
     @Test(groups = "starhealth001")
     public void validateStarHealthLogoAlt() throws InterruptedException {
+    	
+    	// create a test and add logs
+    	
         // Get the alt value of the logo
         String altText = homePAGE.getStarHealthLogoAltText();
 
         // Validate the alt value using TestNG assertion
         Assert.assertEquals(altText, "Star Health Logo", "Alt value of the Star Health logo is incorrect");
-        
+      
         Thread.sleep(4000);
     }
     
     @Test(groups = "starhealth001")
    public void hoverOverPlansMenuAndClickForMyFamily() throws InterruptedException {
         // Create an instance of the StarHealthHomePage class
-   	
+    	
+    
     	homePAGE = new StarHealthHomePage(driver);
 
         // Hover over the Plans menu
@@ -86,8 +99,8 @@ public class StarHealthTest {
     @Test(groups = "starhealth001")
     public void inputs_data() throws InterruptedException {
    	
-   	Thread.sleep(2000);
-    	
+   	Thread.sleep(4000);
+   	
    	WebElement name= driver.findElement(By.id("name"));
    	name.click();
     	name.sendKeys("demo");
