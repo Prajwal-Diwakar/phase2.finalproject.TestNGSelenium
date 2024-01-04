@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="starhealth001"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="66.349">
+  <properties />
+  
+  
+            <testcase name="printAllLinksOnHomePage" time="34.069" classname="phase2.Final.Project.StarHeathTest.StarHealthTest" />
+                <testcase name="inputs_data" time="7.072" classname="phase2.Final.Project.StarHeathTest.StarHealthTest" />
+                <testcase name="validateSocialMediaLinksInFooter" time="5.278" classname="phase2.Final.Project.StarHeathTest.StarHealthTest" />
+                <testcase name="validateStarHealthLogoAlt" time="4.252" classname="phase2.Final.Project.StarHeathTest.StarHealthTest" />
+                <testcase name="hoverOverPlansMenuAndClickForMyFamily" time="7.987" classname="phase2.Final.Project.StarHeathTest.StarHealthTest" />
+                <testcase name="validateTwitterPageOpensInNewTab" time="7.691" classname="phase2.Final.Project.StarHeathTest.StarHealthTest" />
+      
+</testsuite>
